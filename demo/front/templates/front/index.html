@@ -1,0 +1,23 @@
+{% extends "front/layout.html" %}x
+{% load static %}
+
+{% block content %}
+    <h1>Product List</h1>
+    <form id="product-form">
+        <h2>Add a New Product</h2>
+        <input type="text" id="name" name="name" placeholder="Product Name" required>
+        <input type="number" id="price" name="price" placeholder="Product Price" step="0.01" required>
+        <textarea id="description" name="description" placeholder="Product Description" rows="4" required></textarea>
+        <button type="submit">Add Product</button>
+    </form>
+    <table id="product-table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody id="product-list"></tbody>
+    </table>
+{% endblock content%}
